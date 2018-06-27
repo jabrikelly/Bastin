@@ -1,0 +1,117 @@
+@model IEnumerable<BastinWebApp.Models.Melding>
+@{
+    ViewData["Title"] = "Meldingen";
+}
+<p>
+    <a asp-action="Create">Nieuwe melding</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeMelding)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgendaDatum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ondertitel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Omschrijving)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Afdeling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Link)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AfbeeldingPad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcedurePad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TypeMelding)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Datum)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AgendaDatum)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Titel)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ondertitel)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Omschrijving)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Afdeling)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Machine)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Klant)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Link)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AfbeeldingPad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProcedurePad)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+    </td>
+</tr>
+}
+    </tbody>
+</table>
+@foreach (var item in Model)
+{
+<div class="card card-sm bg-danger">
+    <div class="card-body">
+        <div class="mb-4 clearfix">
+            <div class="float-left text-left">
+                <i class="batch-icon batch-icon-reply batch-icon-xxl"></i>
+            </div>
+            <div class="float-right text-right">
+                <h6 class="m-0">Products Returned</h6>
+            </div>
+        </div>
+        <div class="text-right clearfix">
+            <div class="display-4">231</div>
+            <div class="m-0">-4% Today</div>
+        </div>
+    </div>
+</div>
+}

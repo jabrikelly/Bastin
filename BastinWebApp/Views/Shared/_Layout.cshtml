@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bastin</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/fonts/batch-icons/css/batch-icons.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/fonts/batch-icons/css/batch-icons.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/bootstrap/mdb.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/plugins/custom-scrollbar/jquery.mCustomScrollbar.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/hamburgers/hamburgers.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/fonts/font-awesome/css/font-awesome.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/quillpro/quillpro.css" asp-append-version="true" />
+    </environment>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="px-0 bg-dark bg-gradient sidebar">
+                <ul class="nav nav-pills flex-column">
+                    <li class="logo-nav-item">
+                        <a class="navbar-brand" href="#">
+                            <h4>BASTIN-PACK</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <h6 class="nav-header">PRODUCTIE</h6>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="batch-icon batch-icon-home-alt"></i>Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-parent" href="#"><i class="batch-icon batch-icon-book-alt-lines"></i>BRC/ ISO</a>
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#">Drukkerij</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Lamineuse</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Snijafdeling</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Zakkenafdeling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-parent" href="#"><i class="batch-icon batch-icon-eye"></i>Manuals</a>
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#">Drukkerij</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Lamineuse</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Snijafdeling</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Zakkenafdeling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-parent" href="#"><i class="batch-icon batch-icon-clipboard"></i>Documenten</a>
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#">Drukkerij</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Lamineuse</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Snijafdeling</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Zakkenafdeling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="batch-icon batch-icon-settings"></i>Productiecijfers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="batch-icon batch-icon-spam"></i>Afval</a>
+                    </li>
+
+                </ul>
+
+                <ul class="nav nav-pills flex-column">
+                    <li>
+                        <h6 class="nav-header">VOORLOPIG</h6>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Melding" asp-action="Index"><i class="batch-icon batch-icon-bell"></i>Meldingen</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Gebruiker" asp-action="Index"><i class="batch-icon batch-icon-user-alt-3
+"></i>Gebruikers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-parent" href="#"><i class="batch-icon batch-icon-settings-alt-2"></i>Instellingen</a>
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Privilege" asp-action="Index">Privileges</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        
+                    </li>
+                </ul>
+
+
+            </nav>
+            <div class="right-column">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <a class="navbar-brand d-block d-sm-block d-md-block d-lg-none" href="#">
+                        <h5>BASTIN-PACK</h5>
+                    </a>
+                    <button class="hamburger hamburger--slider" type="button" data-target=".sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle Sidebar">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+
+
+                    <!-- BOVENSTE NAVBAR -->
+                    <div class="collapse navbar-collapse" id="navbar-header-content">
+                        <!-- LINKS -->
+                        <ul class="navbar-nav navbar-language-translation mr-auto">
+                            <li><h3>@ViewData["Title"]</h3></li>
+                        </ul>
+
+                        <!-- RECHTS - ZOEKEN -->
+                        <ul class="navbar-nav navbar-notifications float-right">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbar-dropdown-menu-link" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">
+                                    <i class="batch-icon batch-icon-book-alt-"></i>
+                                    Voorlopig
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbar-dropdown-menu-link">
+                                    <li><a class="dropdown-item" href="#">Een</a></li>
+                                    <li><a class="dropdown-item" href="#">Twee</a></li>
+                                    <li><a class="dropdown-item" href="#">Drie</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbar-notification-search" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">
+                                    <i class="batch-icon batch-icon-search"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-fullscreen" aria-labelledby="navbar-notification-search">
+                                    <li>
+                                        <form class="form-inline my-2 my-lg-0 no-waves-effect">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary btn-gradient waves-effect waves-light" type="button">Search</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-content p-5" role="main">
+
+
+                    @RenderBody()
+
+
+                </main>
+
+            </div>
+        </div>
+    </div>
+            <environment include="Development">
+                <script src="~/js/jquery/jquery-3.1.1.min.js"></script>
+                <script src="~/lib/bootstrap/dist/js/popper.min.js" asp-append-version="true"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+                <script src="~/lib/bootstrap/dist/js/mdb.min.js" asp-append-version="true"></script>
+                <script src="~/plugins/velocity/velocity.min.js" asp-append-version="true"></script>
+                <script src="~/js/plugins/velocity/velocity.ui.min.js" asp-append-version="true"></script>
+                <script src="~/plugins/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js" asp-append-version="true"></script>
+                <script src="~/plugins/jquery_visible/jquery.visible.min.js" asp-append-version="true"></script>
+                <script src="~/js/misc/ie10-viewport-bug-workaround.js" asp-append-version="true"></script>
+                <script src="~/plugins/chartjs/chart.bundle.min.js" asp-append-version="true"></script>
+                <script src="~/js/misc/holder.min.js" asp-append-version="true"></script>
+                <script src="~/js/scripts.js" asp-append-version="true"></script>
+            </environment>
+
+            @RenderSection("Scripts", required: false)
+</body>
+</html>

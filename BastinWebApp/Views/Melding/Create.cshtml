@@ -1,0 +1,83 @@
+@model BastinWebApp.Models.Melding
+@using BastinWebApp.Models
+@{
+    ViewData["Title"] = "Melding aanmaken";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TypeMelding" class="control-label"></label>
+                @Html.DropDownListFor(model => model.TypeMelding, new SelectList(new TypeMelding[] {TypeMelding.Klacht,TypeMelding.InterneAfwijking,TypeMelding.ISOBRC,TypeMelding.Mededeling,TypeMelding.Agendapunt}),htmlAttributes:new { @class="form-control"})
+                <span asp-validation-for="TypeMelding" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Datum" class="control-label"></label>
+                <input asp-for="Datum" class="form-control" />
+                <span asp-validation-for="Datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgendaDatum" class="control-label"></label>
+                <input asp-for="AgendaDatum" class="form-control" />
+                <span asp-validation-for="AgendaDatum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titel" class="control-label"></label>
+                <input asp-for="Titel" class="form-control" />
+                <span asp-validation-for="Titel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ondertitel" class="control-label"></label>
+                <input asp-for="Ondertitel" class="form-control" />
+                <span asp-validation-for="Ondertitel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Omschrijving" class="control-label"></label>
+                <input asp-for="Omschrijving" class="form-control" />
+                <span asp-validation-for="Omschrijving" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Afdeling" class="control-label"></label>
+                <select asp-for="Afdeling" class="form-control"></select>
+                <span asp-validation-for="Afdeling" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine" class="control-label"></label>
+                <select asp-for="Machine" class="form-control"></select>
+                <span asp-validation-for="Machine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Klant" class="control-label"></label>
+                <input asp-for="Klant" class="form-control" />
+                <span asp-validation-for="Klant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Link" class="control-label"></label>
+                <input asp-for="Link" class="form-control" />
+                <span asp-validation-for="Link" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AfbeeldingPad" class="control-label"></label>
+                <input asp-for="AfbeeldingPad" class="form-control" />
+                <span asp-validation-for="AfbeeldingPad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcedurePad" class="control-label"></label>
+                <input asp-for="ProcedurePad" class="form-control" />
+                <span asp-validation-for="ProcedurePad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

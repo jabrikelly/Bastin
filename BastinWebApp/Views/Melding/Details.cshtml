@@ -1,0 +1,87 @@
+@model BastinWebApp.Models.Melding
+
+@{
+    ViewData["Title"] = "Details melding";
+}
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeMelding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeMelding)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgendaDatum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgendaDatum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Titel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Titel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ondertitel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ondertitel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Omschrijving)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Omschrijving)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Afdeling)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Afdeling)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Klant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Klant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AfbeeldingPad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AfbeeldingPad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcedurePad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProcedurePad)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

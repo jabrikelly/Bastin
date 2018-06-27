@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Melding.cshtml.cs" />
+    <Compile Remove="Controllers\MeldingenController.cs" />
+    <Compile Remove="Migrations\20180626161212_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20180626161212_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180626163726_Productiecijfers.cs" />
+    <Compile Remove="Enum\Productie.cs" />
+    <Compile Remove="Controllers\PrivilegeController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Melding\Create.cshtml" />
+    <Content Remove="Views\Productiecijfers\Create.cshtml" />
+    <Content Remove="Views\Productiecijfers\Delete.cshtml" />
+    <Content Remove="Views\Meldingen\Index.cshtml" />
+    <Content Remove="Views\Privilege\Create.cshtml" />
+    <Content Remove="Views\Privilege\Delete.cshtml" />
+    <Content Remove="Views\Privilege\Details.cshtml" />
+    <Content Remove="Views\Privilege\Edit.cshtml" />
+    <Content Remove="Views\Privilege\Index.cshtml" />
+    <Content Remove="Views\Melding\Delete.cshtml" />
+    <Content Remove="Views\Melding\Details.cshtml" />
+    <Content Remove="Views\Melding\Edit.cshtml" />
+    <Content Remove="Views\Melding\Index.cshtml" />
+    <Content Remove="Views\Gebruiker\Create.cshtml" />
+    <Content Remove="Views\Gebruiker\Delete.cshtml" />
+    <Content Remove="Views\Gebruiker\Details.cshtml" />
+    <Content Remove="Views\Gebruiker\Edit.cshtml" />
+    <Content Remove="Views\Gebruiker\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Melding\Create.cshtml" />
+    <None Include="Views\Melding\Delete.cshtml" />
+    <None Include="Views\Melding\Details.cshtml" />
+    <None Include="Views\Melding\Edit.cshtml" />
+    <None Include="Views\Melding\Index.cshtml" />
+    <None Include="Views\Gebruiker\Create.cshtml" />
+    <None Include="Views\Gebruiker\Delete.cshtml" />
+    <None Include="Views\Gebruiker\Details.cshtml" />
+    <None Include="Views\Gebruiker\Edit.cshtml" />
+    <None Include="Views\Gebruiker\Index.cshtml" />
+    <None Include="Views\Privilege\Create.cshtml" />
+    <None Include="Views\Privilege\Delete.cshtml" />
+    <None Include="Views\Privilege\Details.cshtml" />
+    <None Include="Views\Privilege\Edit.cshtml" />
+    <None Include="Views\Privilege\Index.cshtml" />
+  </ItemGroup>
+</Project>
